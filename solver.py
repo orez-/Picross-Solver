@@ -16,7 +16,7 @@ def solve_board(horiz, vert):
 
     progress = True
     while progress:
-        for lines, annotated_lines in ((rows, annotated_rows), (cols, annotated_cols)):
+        for annotated_lines in (annotated_rows, annotated_cols):
             for rule, line in annotated_lines:
                 if not solve_line(line, rule):
                     raise Exception("Inconsistent board!!")
